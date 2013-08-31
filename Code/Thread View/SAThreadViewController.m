@@ -6,6 +6,7 @@
 //
 
 #import "SAThreadViewController.h"
+#import <AFNetworking/AFHTTPClient.h>
 #import "SAForumsClient.h"
 #import "SAPost+Rendering.h"
 #import "SAPostTextView.h"
@@ -29,6 +30,7 @@
 @interface SAThreadViewController () <UICollectionViewDelegateFlowLayout>
 
 @property (copy, nonatomic) NSArray *posts;
+@property (readonly, strong, nonatomic) AFHTTPClient *imageClient;
 
 @end
 
@@ -83,6 +85,19 @@
     [self.collectionView reloadData];
 }
 
+- (AFHTTPClient *)imageClient
+{
+    static AFHTTPClient *imageClient = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        imageClient = [AFHTTPClient new];
+        AFImageSerializer *serializer = [AFImageSerializer new];
+        serializer.imageScale = 1;
+        imageClient.responseSerializer = serializer;
+    });
+    return imageClient;
+}
+
 #pragma mark UICollectionViewDataSource and UICollectionViewDelegateFlowLayout
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -101,7 +116,22 @@
     SAPostColletionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Post"
                                                                               forIndexPath:indexPath];
     SAPost *post = self.posts[indexPath.section];
-    cell.textView.attributedText = post.stringContents;
+    NSAttributedString *string = post.stringContents;
+    cell.textView.attributedText = string;
+    for (NSURL *imageURL in cell.textView.missingImageAttachmentURLs) {
+        __weak __typeof__(self) weakSelf = self;
+        [self.imageClient GET:imageURL.absoluteString
+                   parameters:nil
+                      success:^(NSHTTPURLResponse *response, UIImage *image)
+        {
+            __typeof__(self) self = weakSelf;
+            if (![cell.textView.attributedText isEqualToAttributedString:string]) {
+                return;
+            }
+            [cell.textView setImage:image forImageAttachmentWithURL:imageURL];
+            [self.collectionViewLayout invalidateLayout];
+        } failure:nil];
+    }
     return cell;
 }
 
