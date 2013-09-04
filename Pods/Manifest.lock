@@ -5,17 +5,22 @@ PODS:
   - AFNetworking/Core (2.0.0-RC2)
   - AFNetworking/UIKit+AFNetworking (2.0.0-RC2)
   - HTMLReader (0.0.1-alpha.6)
+  - UMAnimatedTextAttachment (0.1)
 
 DEPENDENCIES:
   - AFNetworking (= 2.0.0-RC2)
   - HTMLReader (from `https://github.com/nolanw/HTMLReader`)
+  - UMAnimatedTextAttachment (from `https://github.com/ultramiraculous/UMAnimatedTextAttachment`)
 
 EXTERNAL SOURCES:
   HTMLReader:
     :git: https://github.com/nolanw/HTMLReader
+  UMAnimatedTextAttachment:
+    :git: https://github.com/ultramiraculous/UMAnimatedTextAttachment
 
 SPEC CHECKSUMS:
   AFNetworking: 6b19d8a0793f342d8c879cd0af9d7488e54addcf
   HTMLReader: be8607505ee69ceccc0e3d64692db95c313f8cad
+  UMAnimatedTextAttachment: 11dd14a3293a3f4f851dc738d0188d6bff21dbcf
 
 COCOAPODS: 0.23.0

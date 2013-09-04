@@ -8,8 +8,9 @@
 #import "SAPost+Rendering.h"
 #import <HTMLReader/HTMLParser.h>
 #import "SAForumsClient.h"
-#import "SAImageAttachment.h"
+#import "SAImageTextAttachment.h"
 #import "SAPostTextView.h"
+#import "UIImage+animatedGIF.h"
 
 @interface HTMLNode (SAPostRendering)
 
@@ -112,14 +113,11 @@
                        value:BodyFontWithSymbolicTraits(UIFontDescriptorTraitItalic)
                        range:NSMakeRange(0, string.length)];
     }
-    else if ([self.tagName isEqualToString:@"img"]) {
+	else if ([self.tagName isEqualToString:@"img"]) {
         NSURL *url = [NSURL URLWithString:self[@"src"] relativeToURL:[SAForumsClient client].baseURL];
-        NSRange range = NSMakeRange(string.length, 1);
-        [string.mutableString appendFormat:@"%C", (unichar)NSAttachmentCharacter];
-        [string addAttribute:SAImageAttachmentAttributeName
-                       value:[[SAImageAttachment alloc] initWithURL:url]
-                       range:range];
-    }
+		SAImageTextAttachment *attachment = [SAImageTextAttachment attachmentWithURL:url];
+		[string appendAttributedString:[NSAttributedString attributedStringWithAttachment:attachment]];
+	}
     else if ([self.tagName isEqualToString:@"li"]) {
         [string.mutableString insertString:@"•\t" atIndex:0];
         NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];

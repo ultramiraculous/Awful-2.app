@@ -27,7 +27,7 @@
 
 @end
 
-@interface SAThreadViewController () <UICollectionViewDelegateFlowLayout>
+@interface SAThreadViewController () <UICollectionViewDelegateFlowLayout, NSLayoutManagerDelegate>
 
 @property (copy, nonatomic) NSArray *posts;
 @property (readonly, strong, nonatomic) AFHTTPClient *imageClient;
@@ -118,20 +118,8 @@
     SAPost *post = self.posts[indexPath.section];
     NSAttributedString *string = post.stringContents;
     cell.textView.attributedText = string;
-    for (NSURL *imageURL in cell.textView.missingImageAttachmentURLs) {
-        __weak __typeof__(self) weakSelf = self;
-        [self.imageClient GET:imageURL.absoluteString
-                   parameters:nil
-                      success:^(NSHTTPURLResponse *response, UIImage *image)
-        {
-            __typeof__(self) self = weakSelf;
-            if (![cell.textView.attributedText isEqualToAttributedString:string]) {
-                return;
-            }
-            [cell.textView setImage:image forImageAttachmentWithURL:imageURL];
-            [self.collectionViewLayout invalidateLayout];
-        } failure:nil];
-    }
+	cell.textView.layoutManager.delegate = self;
+	
     return cell;
 }
 
@@ -181,6 +169,14 @@ referenceSizeForFooterInSection:(NSInteger)section
     }
     return CGSizeMake(0, 1);
 }
+
+#pragma mark - NSLayoutManagerDelegate
+
+-(void)layoutManager:(NSLayoutManager *)layoutManager textContainer:(NSTextContainer *)textContainer didChangeGeometryFromSize:(CGSize)oldSize
+{
+	[self.collectionViewLayout invalidateLayout];
+}
+
 
 @end
 

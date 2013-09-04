@@ -21,13 +21,14 @@
 		1CB61D2317BB38BF00EE9653 /* SAThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB61D2217BB38BF00EE9653 /* SAThreadViewController.m */; };
 		1CCE520517D06FF2004E9B5A /* SAPostTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCE520417D06FF2004E9B5A /* SAPostTextView.m */; };
 		1CCE520817D07587004E9B5A /* SAPost+Rendering.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCE520717D07587004E9B5A /* SAPost+Rendering.m */; };
-		1CE51C5717D1E2BE00F695B0 /* SAImageAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE51C5617D1E2BE00F695B0 /* SAImageAttachment.m */; };
 		1CF4583E17CC6B66000F64B5 /* SAForum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4583D17CC6B66000F64B5 /* SAForum.m */; };
 		1CFBD7A717B6B4A300D8CA66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBD7A317B6B4A300D8CA66 /* main.m */; };
 		1CFBD7A817B6B4A300D8CA66 /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBD7A617B6B4A300D8CA66 /* SAAppDelegate.m */; };
 		1CFBD7AC17B6B4BA00D8CA66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBD7AA17B6B4BA00D8CA66 /* Images.xcassets */; };
 		1CFDEF0517B6B85F0076EC8D /* QuietAssertMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDEF0417B6B85F0076EC8D /* QuietAssertMacros.c */; };
 		1CFDEF0B17B6CD390076EC8D /* SAForumsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDEF0A17B6CD390076EC8D /* SAForumsClient.m */; };
+		83FA197717D40C090041AA6F /* SAImageTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA197617D40C090041AA6F /* SAImageTextAttachment.m */; };
+		83FA197A17D423BF0041AA6F /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA197917D423BF0041AA6F /* UIImage+animatedGIF.m */; };
 		C45EF707A7E44B85AD369554 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D549B8B544B7AACD99D8D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +63,6 @@
 		1CCE520417D06FF2004E9B5A /* SAPostTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAPostTextView.m; sourceTree = "<group>"; };
 		1CCE520617D07587004E9B5A /* SAPost+Rendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAPost+Rendering.h"; sourceTree = "<group>"; };
 		1CCE520717D07587004E9B5A /* SAPost+Rendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAPost+Rendering.m"; sourceTree = "<group>"; };
-		1CE51C5517D1E2BE00F695B0 /* SAImageAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAImageAttachment.h; sourceTree = "<group>"; };
-		1CE51C5617D1E2BE00F695B0 /* SAImageAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAImageAttachment.m; sourceTree = "<group>"; };
 		1CF4583C17CC6B66000F64B5 /* SAForum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAForum.h; sourceTree = "<group>"; };
 		1CF4583D17CC6B66000F64B5 /* SAForum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAForum.m; sourceTree = "<group>"; };
 		1CFBD7A317B6B4A300D8CA66 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,6 +74,10 @@
 		1CFDEF0417B6B85F0076EC8D /* QuietAssertMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QuietAssertMacros.c; sourceTree = "<group>"; };
 		1CFDEF0917B6CD390076EC8D /* SAForumsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAForumsClient.h; sourceTree = "<group>"; };
 		1CFDEF0A17B6CD390076EC8D /* SAForumsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAForumsClient.m; sourceTree = "<group>"; };
+		83FA197517D40C090041AA6F /* SAImageTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAImageTextAttachment.h; sourceTree = "<group>"; };
+		83FA197617D40C090041AA6F /* SAImageTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAImageTextAttachment.m; sourceTree = "<group>"; };
+		83FA197817D423BF0041AA6F /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		83FA197917D423BF0041AA6F /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +145,10 @@
 		1CCE51F617D043F9004E9B5A /* Thread View */ = {
 			isa = PBXGroup;
 			children = (
-				1CE51C5517D1E2BE00F695B0 /* SAImageAttachment.h */,
-				1CE51C5617D1E2BE00F695B0 /* SAImageAttachment.m */,
+				83FA197817D423BF0041AA6F /* UIImage+animatedGIF.h */,
+				83FA197917D423BF0041AA6F /* UIImage+animatedGIF.m */,
+				83FA197517D40C090041AA6F /* SAImageTextAttachment.h */,
+				83FA197617D40C090041AA6F /* SAImageTextAttachment.m */,
 				1CCE520617D07587004E9B5A /* SAPost+Rendering.h */,
 				1CCE520717D07587004E9B5A /* SAPost+Rendering.m */,
 				1CCE520317D06FF2004E9B5A /* SAPostTextView.h */,
@@ -224,7 +229,7 @@
 				ORGANIZATIONNAME = "Awful Contributors";
 				TargetAttributes = {
 					1C94C57C17B5F63D00EB865E = {
-						DevelopmentTeam = 9RR6L9X39A;
+						DevelopmentTeam = 9MW7QE42Z5;
 					};
 				};
 			};
@@ -302,13 +307,14 @@
 				1CB61D1417B8ABCF00EE9653 /* SAHTMLSerializer.m in Sources */,
 				1CCE520517D06FF2004E9B5A /* SAPostTextView.m in Sources */,
 				1CB31FC117B751BF00988F5A /* SALoginFormViewController.m in Sources */,
-				1CE51C5717D1E2BE00F695B0 /* SAImageAttachment.m in Sources */,
 				1CF4583E17CC6B66000F64B5 /* SAForum.m in Sources */,
 				1CFBD7A717B6B4A300D8CA66 /* main.m in Sources */,
 				1CFDEF0B17B6CD390076EC8D /* SAForumsClient.m in Sources */,
 				1CFDEF0517B6B85F0076EC8D /* QuietAssertMacros.c in Sources */,
 				1CB61D1D17B9F7C300EE9653 /* SABasementItem.m in Sources */,
 				1CB61D1A17B9F5A700EE9653 /* SASidebarViewController.m in Sources */,
+				83FA197A17D423BF0041AA6F /* UIImage+animatedGIF.m in Sources */,
+				83FA197717D40C090041AA6F /* SAImageTextAttachment.m in Sources */,
 				1CB61D2317BB38BF00EE9653 /* SAThreadViewController.m in Sources */,
 				1CB61D1717B9B52100EE9653 /* SABasementViewController.m in Sources */,
 			);
@@ -404,10 +410,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../Code/Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = ../Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,10 +429,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../Code/Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = ../Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

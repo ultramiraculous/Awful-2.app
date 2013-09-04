@@ -12,19 +12,6 @@
  */
 @interface SAPostTextView : UITextView
 
-/**
- * Returns an array of NSURL objects of image attachments whose image size is unkown.
- */
-- (NSArray *)missingImageAttachmentURLs;
-
-/**
- * Sets an image for all image attachments with the URL. This method may cause the text view to re-layout.
- *
- * @param image The image to use.
- * @param attachmentURL The URL of the image as returned by -missingImageAttachmentURLs.
- */
-- (void)setImage:(UIImage *)image forImageAttachmentWithURL:(NSURL *)attachmentURL;
-
 @end
 
 /**

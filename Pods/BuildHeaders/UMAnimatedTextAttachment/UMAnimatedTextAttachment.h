@@ -1,0 +1,1 @@
+../../UMAnimatedTextAttachment/UMAnimatedTextAttachment/UMAnimatedTextAttachment.h

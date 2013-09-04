@@ -30,3 +30,9 @@
 #define COCOAPODS_VERSION_MINOR_HTMLReader 0
 #define COCOAPODS_VERSION_PATCH_HTMLReader 1
 
+// UMAnimatedTextAttachment
+#define COCOAPODS_POD_AVAILABLE_UMAnimatedTextAttachment
+#define COCOAPODS_VERSION_MAJOR_UMAnimatedTextAttachment 0
+#define COCOAPODS_VERSION_MINOR_UMAnimatedTextAttachment 1
+#define COCOAPODS_VERSION_PATCH_UMAnimatedTextAttachment 0
+
